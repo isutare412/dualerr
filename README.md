@@ -10,7 +10,7 @@ When developing backend server, I expect two things on logs.
 1. Trace the stack that an error occurred.
 2. Get an error message for client response.
 
-A vanilla go error is quite goot for the requirement number one. See the below
+A vanilla go error is quite good for the requirement number one. See the below
 example.
 
 ```go
