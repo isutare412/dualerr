@@ -41,3 +41,11 @@ func TestWrapping(t *testing.T) {
 			restored.Simple(), simpleErrMsg)
 	}
 }
+
+func ExampleNew() {
+	errFromRedis := fmt.Errorf("ERROR key not found")
+
+	errOne := dualerr.New(errFromRedis, "no such user with name[%s]", "redshore")
+	fmt.Println(errOne.Error())
+	// Output: dualerr_test.ExampleNew: ERROR key not found
+}
